@@ -711,18 +711,21 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
-  var prefix = "b!"
-  if (message.content === prefix + "bot") {
-  let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField("**السيرفرات:**" , client.guilds.size)
-  .addField("**المستخدمين:**", client.users.size)
-  .addField("**الرومات:**", client.channels.size)
-    .addField("**البنق:**", Date.now)
-  .addField("**إسم البوت:**", client.user.username)
-  .setTimestamp()
-message.channel.sendEmbed(embed);
+
+var prefix = "b!"
+         client.on('message', message => {
+            if (message.content.startsWith(prefix + "bot")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField(' السيرفرات🌐',`[${client.guilds.size}]  `)
+.addField(' الاعضاء👥 ',` [${client.users.size}] `)
+.addField('الرومات📚 ',`[${client.channels.size}]`) 
+.addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
+.addField('إسم البوت:regional_indicator_a:  ',`[${client.user.username}]`) 
+
+.addField('مصمم  + صاحب البوت ',`!Hmam#1606`)
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
     }
 });
 
