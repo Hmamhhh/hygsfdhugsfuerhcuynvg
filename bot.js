@@ -39,34 +39,111 @@ client.user.setStatus("dnd");
             
 
 
+var AsciiTable = require('ascii-data-table').default
+client.on('message', message =>{
 
+    if(message.content == "b!roles"){
+        var 
+        ros=message.guild.roles.size,
+        data = [['Rank', 'RoleName']]
+        for(let i =0;i<ros;i++){
+            if(message.guild.roles.array()[i].id !== message.guild.id){
+         data.push([i,`${message.guild.roles.filter(r => r.position == ros-i).map(r=>r.name)}`])
+        }}
+        let res = AsciiTable.table(data)
 
-
-
-
-var prefix = "b!"
-client.on('message',function(message) {
-    let toKick = message.mentions.users.first();
-    let toReason = message.content.split(" ").slice(2).join(" ");
-    let toEmbed = new Discord.RichEmbed()
-   if(message.content.startsWith(prefix + 'kick')) {
-       if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You dont have enough permissions!**');
-       if(toKick.bannable) return message.reply("**# - I cannot kick someone with a higher role than me!**");
-       if(!toReason) return message.reply("**# - Supply a reason!**")
-       if(toKick.id === message.author.id) return message.reply("**# You cannot kick yourself!**")
-       if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
-       let toEmbed;
-       toEmbed = new Discord.RichEmbed()
-       .setTitle("You have been kicked from a server!")
-       .setThumbnail(toKick.avatarURL)
-       .addField("**# - Server:**",message.guild.name,true)
-       .addField("**# - Reason:**",toReason,true)
-       .addField("**# - Kicked By:**",message.author,true)
-       if(message.member.hasPermission("KICK_MEMBERS")) return (
-           toKick.sendMessage({embed: toEmbed}).then(() => message.guild.member(toKick).kick()).then(() => message.channel.send(`**# Done! I kicked: ${toKick}**`))
-       )
-       }
+        message.channel.send(`**\`\`\`xl\n${res}\`\`\`**`);
+    }
 });
+
+
+
+var prefix ="b!"
+client.on("message", message => { 
+              var args = message.content.substring(prefix.length).split(" ");
+              if (message.content.startsWith(prefix + "clear")) {
+                  if(!message.channel.guild) return message.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
+     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠  لا يوجد لديك صلاحية لمسح الشات**');
+          var msg;
+          msg = parseInt();
+        
+        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+        message.channel.sendMessage("", {embed: {
+          title: "``تــم مسح الشات ``",
+          color: 0x5016f3, 
+          footer: {
+            
+          }
+        }}).then(msg => {msg.delete(3000)});
+                            }
+  
+       
+  });
+
+client.on('guildCreate', guild => {
+  var embed = new Discord.RichEmbed()
+  .setColor(0x5500ff)
+  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
+      guild.owner.send(embed)
+});
+
+
+
+client.on('message' , message => {
+var prefix = "b!"
+
+if (message.author.bot) return;
+if (message.content.startsWith(prefix + "contact")) {
+if (!message.channel.guild) return;
+
+
+
+let args = message.content.split(" ").slice(1).join(" ");
+
+
+
+Client.users.get("406451228004974603").send(
+    "\n" + "**" + "● السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + " ● المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + " ● الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
+
+let embed = new Discord.RichEmbed()
+     .setAuthor(message.author.username, message.author.avatarURL)
+     .setDescription('📬 تم ارسال الرسالة الى صاحب البوت بنجاح')
+     .setThumbnail(message.author.avatarURL)
+     .setFooter("By : Rosé // SaifDz")
+                                                
+
+message.channel.send(embed);
+
+
+}
+    
+});
+
+
+
+
+client.on('message', message => {
+            if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('b!bc')){
+ if (message.author.id !== '389090790984515594') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+message.channel.sendMessage('جار ارسال الرسالة |✅')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
+
+
+
+
+
+
 
 
 client.on('message', message => {
@@ -607,6 +684,16 @@ client.on('message', message => {
 });
 
 
+client.on('message', message => {
+       if (message.content ===  "b!help") {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.send)
+.addField('     **الترحيب والمغادرة** ' ,' **  ** ')  
+.addField('     **الترحيب** ' ,' **وسيتم الترحيب بالعضو الجديد تلقائيا welcome ضع روم اسمه** ')
+.setColor('RANDOM')
+  message.author.send(embed);
+    }
+});
 
 
 
@@ -615,7 +702,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.send)
 .addField('     **أوامر الإدارة** ' ,' **  ** ')  
-.addField('     **b!bc** ' ,' **إرسال رسالة لجميع الأعضاء** ')
+.addField('     **b!clear** ' ,' **لمسح الشات** ')
 .addField('    **b!mute**' ,' **لإعطاء ميوت لشخص ما** ')
 .addField('    **b!unmute**' ,' **لفك الميوت عن الشخص** ')
 .addField('    **b!ban**' ,' **لحظر الشخص من ** ')
@@ -636,21 +723,13 @@ client.on('message', message => {
 .addField('    **b!server**' ,' **لعرض حالة السيرفر** ')
 .addField('     **b!support** ' ,' **لعرض سيرفر السبورت** ')
 .addField('     **b!inv** ' ,' **لدعوة البوت للسيرفر** ')
+.addField('     **b!roles** ' ,' **لعرض رتب السيرفر** ')
+.addField('     **b!contact** ' ,' **لإرسال رسالة لأونر البوت** ')
 .setColor('RANDOM')
   message.author.send(embed);
     }
 });
 
-client.on('message', message => {
-       if (message.content ===  "b!help") {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.send)
-.addField('     **الترحيب والمغادرة** ' ,' **  ** ')  
-.addField('     **الترحيب** ' ,' **وسيتم الترحيب بالعضو الجديد تلقائيا welcome ضع روم اسمه** ')
-.setColor('RANDOM')
-  message.author.send(embed);
-    }
-});
 
 client.on('message', message => {
        if (message.content ===  "b!help") {
