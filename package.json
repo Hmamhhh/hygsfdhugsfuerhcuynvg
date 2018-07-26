@@ -46,6 +46,5 @@
     "ffmpeg-binaries": "^3.2.2-3",
     "simple-youtube-api": "^5.0.2"
     "ascii-data-table": "^2.1.1",
-
   }
 }
