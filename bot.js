@@ -415,15 +415,15 @@ client.on('message' , message => {
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
-        if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
+        if(!user) return  message.channel.send(`يجب كتابة ايدي العضو وليس منشن`);
         message.guild.unban(user);
         message.guild.owner.send(`لقد تم فك الباند عن الشخص \n ${user} \n By : <@${message.author.id}>`)
         var embed = new Discord.RichEmbed()
         .setThumbnail(message.author.avatarURl)
         .setColor("RANDOM")
-        .setTitle('**Unban** !')
-        .addField('**User Unban :** ', `${user}` , true)
-        .addField('**By :**' ,       ` <@${message.author.id}> ` , true)
+        .setTitle('**تم فك الباند** !')
+        .addField('**فك الباند عن :** ', `${user}` , true)
+        .addField('**بواسطة :**' ,       ` <@${message.author.id}> ` , true)
         .setAuthor(message.guild.name)
         message.channel.sendEmbed(embed)
     }
@@ -439,83 +439,40 @@ if (message.content.startsWith("b!ban")) {
 
     mention.ban("By: " + message.author.tag);
     
-    message.channel.send("تم أعطاء باند الى : " + mention.tag);
+    message.channel.send("تم أعطاء باند للشخص");
 };
 });
 
 
 
-const bot = new Discord.Client();
-var Canvas = require('canvas');// npm i canvas
-var jimp = require('jimp');// npm i jimp 
-const fs = require("fs");// npm i fs
-
-      bot.on('guildMemberAdd', member => {
-      const welcomer =  member.guild.channels.find('name', 'welcome');
-
-      var Canvas = require('canvas')
-      var jimp = require('jimp')
-
-      const w = ['./img/w1.png',
-      './img/w2.png',
-      './img/w3.png',
-      './img/w4.png',
-      './img/w5.png',
-      './img/w7.png',
-      './img/w8.png'];
-
-              let Image = Canvas.Image,
-                  canvas = new Canvas(401, 202),
-                  ctx = canvas.getContext('2d');
-              ctx.patternQuality = 'bilinear';
-              ctx.filter = 'bilinear';
-              ctx.antialias = 'subpixel';
-              ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
-              ctx.shadowOffsetY = 2;
-              ctx.shadowBlur = 2;
-              fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-                  if (err) return console.log(err)
-                  let BG = Canvas.Image;
-                  let ground = new Image;
-                  ground.src = Background;
-                  ctx.drawImage(ground, 0, 0, 401, 202);
-
-      })
-
-                      let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(5, -20) + ".gif" : member.user.displayAvatarURL;
-                      jimp.read(url, (err, ava) => {
-                          if (err) return console.log(err);
-                          ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                              if (err) return console.log(err);
-
-                              
-                              let Avatar = Canvas.Image;
-                              let ava = new Avatar;
-                              ava.src = buf;
-                              ctx.drawImage(ava, 152, 27, 95, 95);
-
-                                                      //wl
-                              ctx.font = '20px Arial Bold';
-                              ctx.fontSize = '15px';
-                              ctx.fillStyle = "#FFFFFF";
-                              ctx.textAlign = "center";
-                                                         ctx.fillText(member.user.username, 200, 154);
-
-                              //NAME
-                              ctx.font = '20px Arial';
-                              ctx.fontSize = '28px';
-                              ctx.fillStyle = "#FFFFFF";
-                              ctx.textAlign = "center";
-                                    ctx.fillText(`انت العضو رقم${member.guild.memberCount} `
-                              , 200, 190);
-
- welcomer.sendFile(canvas.toBuffer())
-
-
-
-      })
-      })
-      });
+client.on('guildMemberAdd', member => {
+        var embed = new Discord.RichEmbed()
+        .setAuthor(member.user.username, member.user.avatarURL)
+        .setThumbnail(member.user.avatarURL)
+        .setTitle(`اهلاً و سهلاً :raised_hand::skin-tone-1: :smiley:` , `welcome :raised_hand::skin-tone-1: :smiley:`)
+        .setDescription(`منور السيرفر يا حلو :blush:` , `welcome to the server :blush:`)
+        .addField(' :bust_in_silhouette:  انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
+        .setColor('GREEN')
+        .setFooter('==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+    
+    var channel =member.guild.channels.find('name', 'welcome')
+    if (!channel) return;
+    channel.send({embed : embed});
+    });
+client.on('guildMemberRemove', member => {
+        var embed = new Discord.RichEmbed()
+        .setAuthor(member.user.username, member.user.avatarURL)
+        .setThumbnail(member.user.avatarURL)
+        .setTitle(`الله معاك :raised_hand::skin-tone-1: :pensive:`)
+        .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
+        .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+        .setColor('RED')
+        .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+    
+    var channel =member.guild.channels.find('name', 'welcome')
+    if (!channel) return;
+    channel.send({embed : embed});
+    }) 
   
  
 
