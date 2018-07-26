@@ -635,30 +635,6 @@ client.on("guildMemberAdd", member => {
 
 
 
-const gif = require('gif-search')
-client.on('message', message => {
-      var prefix = "b!";
-    if(message.content.startsWith(prefix + 'gif')) {
-console.log('[Gif Search] Developed By Ghost')
-        if(message.channel.type === 'dm') return message.channel.send(nd)
-        let args = message.content.split(' ').slice(1).join(' ')
-            if (!args) return message.reply('يجب كتابة أسم الصورة')
-    gif.query(args).then(gifUrl => {
-        message.channel.send({
-            files: [{
-                attachment: gifUrl,
-                name: "search.gif"
-            }]
-        });
-    });
-} 
-});
-
-
-
-
- 
-
 
 
 
