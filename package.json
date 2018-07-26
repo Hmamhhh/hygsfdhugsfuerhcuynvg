@@ -7,6 +7,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
+    "canvas": "^1.6.11", 
    "discord.js": "^11.3.2",
     "discord.js-musicbot-addon": "^1.10.3",
     "express": "^4.16.3",
