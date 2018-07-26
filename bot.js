@@ -95,40 +95,7 @@ client.on('guildCreate', guild => {
 
 
 
-client.on('message' , message => {
-var prefix = "b!"
 
-if (message.author.bot) return;
-if (message.content.startsWith(prefix + "contact")) {
-if (!message.channel.guild) return;
-
-
-
-let args = message.content.split(" ").slice(1).join(" ");
-
-
-
-Client.users.get("406451228004974603").send(
-    "\n" + "**" + "● السيرفر :" + "**" +
-    "\n" + "**" + "» " + message.guild.name + "**" +
-    "\n" + "**" + " ● المرسل : " + "**" +
-    "\n" + "**" + "» " + message.author.tag + "**" +
-    "\n" + "**" + " ● الرسالة : " + "**" +
-    "\n" + "**" + args + "**")
-
-let embed = new Discord.RichEmbed()
-     .setAuthor(message.author.username, message.author.avatarURL)
-     .setDescription('📬 تم ارسال الرسالة الى صاحب البوت بنجاح')
-     .setThumbnail(message.author.avatarURL)
-     .setFooter("By : Rosé // SaifDz")
-                                                
-
-message.channel.send(embed);
-
-
-}
-    
-});
 
 
 
@@ -715,12 +682,10 @@ client.on('message', message => {
 .setThumbnail(message.author.send)
 .addField('     **أوامر الأعضاء** ' ,' **  ** ')  
 .addField('     **b!help** ' ,' **لعرض أوامر السيرفر** ')
-.addField('     **b!gif** ' ,' **لعرض صورة متحركة** ')
 .addField('    **b!server**' ,' **لعرض حالة السيرفر** ')
 .addField('     **b!support** ' ,' **لعرض سيرفر السبورت** ')
 .addField('     **b!inv** ' ,' **لدعوة البوت للسيرفر** ')
 .addField('     **b!roles** ' ,' **لعرض رتب السيرفر** ')
-.addField('     **b!contact** ' ,' **لإرسال رسالة لأونر البوت** ')
 .setColor('RANDOM')
   message.author.send(embed);
     }
