@@ -636,7 +636,20 @@ client.on("guildMemberAdd", member => {
 
 
 
-
+client.on('message', message => {
+       if (message.content ===  "b!help") {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.send)
+.addField('     **╔══╗──────╔╗─╔═══╗──────────╔╗** ' ,' **  ** ')  
+.addField('     **║╔╗║─────╔╝╚╗║╔══╝──────────║║** ' ,' ** ** ')
+.addField('     **║╚╝╚╦══╦═╩╗╔╝║╚══╦═╦╦══╦═╗╔═╝║**' ,' **ل** ')
+.addField('     **║╔═╗║║═╣══╣║─║╔══╣╔╬╣║═╣╔╗╣╔╗║** ' ,' **** ')
+.addField('     **║╚═╝║║═╬══║╚╗║║──║║║║║═╣║║║╚╝║** ' ,' **** ')
+.addField('     **╚═══╩══╩══╩═╝╚╝──╚╝╚╩══╩╝╚╩══╝** ' ,' **** ')    
+.setColor('RANDOM')
+  message.author.send(embed);
+    }
+});
 
 
 
