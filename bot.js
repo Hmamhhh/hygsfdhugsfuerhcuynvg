@@ -719,6 +719,7 @@ client.on('message', message => {
   .addField("**السيرفرات:**" , client.guilds.size)
   .addField("**المستخدمين:**", client.users.size)
   .addField("**الرومات:**", client.channels.size)
+    .addField("**البنق:**", Date.now)
   .addField("**إسم البوت:**", client.user.username)
   .setTimestamp()
 message.channel.sendEmbed(embed);
