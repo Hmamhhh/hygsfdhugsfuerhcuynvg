@@ -647,7 +647,7 @@ b!help owner | اوامر صاحب البوت
 if(e) return message.reply('خاصك مقفول');
 }
 }
-}):
+});
 
 
 
