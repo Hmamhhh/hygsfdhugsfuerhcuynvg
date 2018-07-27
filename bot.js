@@ -839,3 +839,11 @@ message.react("📩")
 
 }
 });
+
+
+
+
+
+client.on('guildMemberAdd' , m => {
+client.guild.members.get(m.id)addRole(client.guild.roles.find('name' , 'Member'));
+});
