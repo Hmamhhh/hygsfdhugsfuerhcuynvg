@@ -672,15 +672,6 @@ message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.
 
 
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
-:crown:اسم العضو  ${member}:crown:  
-انت العضو رقم ${member.guild.memberCount} `) 
-}).catch(console.error)
-})
-
-
 
 
 
@@ -845,6 +836,6 @@ message.react("📩")
 
 
 
-client.on('guildMemberAdd' , m => {
+client.on('guildMemberAdd', member => {
 client.guild.members.get(m.id)addRole(client.guild.roles.find('name' , 'Member'));
 });
