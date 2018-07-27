@@ -747,6 +747,7 @@ var prefix = "b!"
 
 client.on('message', message => {
 if (message.content === "b!help") {
+if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات `);
 message.reply("**تم ارسال اوامر البوت في الخاص**")
 message.react("📩")
 
@@ -773,11 +774,9 @@ if  (msg.content === 'b!support') {
 
 client.on('message', message => {
 if (message.content === "b!inv") {
+if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات `);
 message.reply("**تم ارسال رابط البوت في الخاص**")
 message.react("📩")
 
 }
 });
-
-
-
