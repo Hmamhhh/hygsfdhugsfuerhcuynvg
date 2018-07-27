@@ -56,13 +56,6 @@ client.on('message', message =>{
     }
 });
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
-:crown:اسم العضو  ${member}:crown:  
-انت العضو رقم ${member.guild.memberCount} `) 
-}).catch(console.error)
-})
 
 var prefix ="b!"
 client.on("message", message => { 
@@ -104,7 +97,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('b!bc')){
- if (message.author.id !== '406451228004974603') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+ if (message.author.id !== '406451228004974603') return message.reply('** هذا الأمر قفط لصاحب البوت  **')
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -631,24 +624,36 @@ client.on("guildMemberAdd", member => {
 
 
 
-client.on('message', message => {
-       if (message.content ===  "b!help") {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.send)
-.addField('     **╔══╗──────╔╗─╔═══╗──────────╔╗** ' ,' **  ** ')  
-.addField('     **║╔╗║─────╔╝╚╗║╔══╝──────────║║** ' ,' ** ** ')
-.addField('     **║╚╝╚╦══╦═╩╗╔╝║╚══╦═╦╦══╦═╗╔═╝║**' ,' ** **')
-.addField('     **║╔═╗║║═╣══╣║─║╔══╣╔╬╣║═╣╔╗╣╔╗║** ' ,' ** ** ')
-.addField('     **║╚═╝║║═╬══║╚╗║║──║║║║║═╣║║║╚╝║** ' ,' ** ** ')
-.addField('     **╚═══╩══╩══╩═╝╚╝──╚╝╚╩══╩╝╚╩══╝** ' ,' ** ** ')    
-.setColor('RANDOM')
-  message.author.send(embed);
-    }
-});
+
+
+
+client.on('message',async message => {
+    if (message.content === 'b!help') {
+try {
+message.author.send(`
+╔══╗──────╔╗─╔═══╗──────────╔╗
+║╔╗║─────╔╝╚╗║╔══╝──────────║║
+║╚╝╚╦══╦═╩╗╔╝║╚══╦═╦╦══╦═╗╔═╝║
+║╔═╗║║═╣══╣║─║╔══╣╔╬╣║═╣╔╗╣╔╗║
+║╚═╝║║═╬══║╚╗║║──║║║║║═╣║║║╚╝║
+╚═══╩══╩══╩═╝╚╝──╚╝╚╩══╩╝╚╩══╝
+b!help public | اوامر عامة
+b!help music | اوامر الأغاني
+b!help admin | أوامر الإدارة
+b!help welcome | الترحيب والمغادرة
+b!help owner | اوامر صاحب البوت
+`);
+} catch(e) {
+if(e) return message.reply('خاصك مقفول');
+}
+}
+}):
+
+
 
 
 client.on('message', message => {
-       if (message.content ===  "b!help") {
+       if (message.content ===  "b!help welcome") {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.send)
 .addField('     **الترحيب والمغادرة** ' ,' **  ** ')  
@@ -661,7 +666,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-       if (message.content ===  "b!help") {
+       if (message.content ===  "b!help admin") {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.send)
 .addField('     **أوامر الإدارة** ' ,' **  ** ')  
@@ -677,7 +682,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-       if (message.content ===  "b!help") {
+       if (message.content ===  "b!help public") {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.send)
 .addField('     **أوامر الأعضاء** ' ,' **  ** ')  
@@ -693,7 +698,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-       if (message.content ===  "b!help") {
+       if (message.content ===  "b!help music") {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.send)
 .addField('     **أوامر الميوزك** ' ,' **  ** ')  
@@ -707,6 +712,20 @@ client.on('message', message => {
   message.author.send(embed);
     }
 });
+
+
+client.on('message', message => {
+       if (message.content ===  "b!help owner") {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.send)
+.addField('     **اوامر صاحب البوت** ' ,' **  ** ')  
+.addField('     **b!bc** ' ,' **لإرسال رسالة لكل السيرفرات اللي ضافت البوت** ')
+.setColor('RANDOM')
+  message.author.send(embed);
+    }
+});
+
+
 
 
 var prefix = "b!"
