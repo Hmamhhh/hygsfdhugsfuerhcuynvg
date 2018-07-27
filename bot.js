@@ -39,6 +39,56 @@ client.user.setStatus("dnd");
             
 
 
+
+
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', 'ايدي الروم').setName("W");
+client.channels.find('id', 'ايدي الروم').setName("We");
+client.channels.find('id', 'ايدي الروم').setName("Wel");
+client.channels.find('id', 'ايدي الروم').setName("Welc");
+client.channels.find('id', 'ايدي الروم').setName("Welco");
+client.channels.find('id', 'ايدي الروم').setName("Welcom");
+client.channels.find('id', 'ايدي الروم').setName("Welcome");
+client.channels.find('id', 'ايدي الروم').setName("Welcome T");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To B");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Be");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Bes");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best F");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Fr");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Fri");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Frie");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Frien");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Friend");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Friend");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Frien");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Frie");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Fri");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best Fr");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best F");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Best");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Bes");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To Be");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To B");
+client.channels.find('id', 'ايدي الروم').setName("Welcome To ");
+client.channels.find('id', 'ايدي الروم').setName("Welcome T");
+client.channels.find('id', 'ايدي الروم').setName("Welcome ");
+client.channels.find('id', 'ايدي الروم').setName("Welcom");
+client.channels.find('id', 'ايدي الروم').setName("Welco");
+client.channels.find('id', 'ايدي الروم').setName("Welc");
+client.channels.find('id', 'ايدي الروم').setName("Wel");
+client.channels.find('id', 'ايدي الروم').setName("We");
+client.channels.find('id', 'ايدي الروم').setName("W");
+
+  }, 3000);
+});
+
+
+
+
+
 var AsciiTable = require('ascii-data-table').default
 client.on('message', message =>{
 
