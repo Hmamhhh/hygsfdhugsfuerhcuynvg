@@ -637,11 +637,11 @@ message.author.send(`
 ║╔═╗║║═╣══╣║─║╔══╣╔╬╣║═╣╔╗╣╔╗║
 ║╚═╝║║═╬══║╚╗║║──║║║║║═╣║║║╚╝║
 ╚═══╩══╩══╩═╝╚╝──╚╝╚╩══╩╝╚╩══╝
-b!help public | اوامر عامة
+**b!help public | اوامر عامة
 b!help music | اوامر الأغاني
 b!help admin | أوامر الإدارة
 b!help welcome | الترحيب والمغادرة
-b!help owner | اوامر صاحب البوت
+b!help owner | اوامر صاحب البوت**
 `);
 } catch(e) {
 if(e) return message.reply('خاصك مقفول');
