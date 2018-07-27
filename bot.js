@@ -836,6 +836,3 @@ message.react("📩")
 
 
 
-client.on('guildMemberAdd', member => {
-client.guild.members.get(m.id)addrole(client.guild.roles.find('name' , 'Member'));
-});
