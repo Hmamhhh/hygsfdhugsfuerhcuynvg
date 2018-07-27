@@ -41,7 +41,6 @@ client.user.setStatus("dnd");
 
 
 
-const Discord = require("discord.js");
 const fs = require("fs")
 let ar = JSON.parse(fs.readFileSync(`./Data/autorole.json`, `utf8`))
 
