@@ -717,6 +717,7 @@ client.on('message', message => {
 .setThumbnail(message.author.send)
 .addField('     **الترحيب والمغادرة** ' ,' **  ** ')  
 .addField('     **الترحيب** ' ,' **وسيتم الترحيب بالعضو الجديد تلقائيا welcome ضع روم اسمه** ')
+     .addField('     **الرتبة التلقائية** ' ,' **ضع رتبة بإسم Member وسيتم إعطاء العضو رتبة تلقائية** ')
 .setColor('RANDOM')
   message.author.send(embed);
     }
