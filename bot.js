@@ -267,7 +267,6 @@ const sql = require("sqlite");
  const pretty = require('pretty-ms') 
 
 
-const prefix = "b!"
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
