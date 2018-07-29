@@ -828,15 +828,24 @@ message.react("📩")
 }
 });
 
-client.on('message', message => {
-       if (message.content ===  "b!help") {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.send)
-.addField('     **الدعم الفني** ' ,' **https://discord.gg/SYgU2pE** ')  
-.addField('     **لإضافة السيرفر** ' ,' **https://discordapp.com/oauth2/authorize?client_id=470744146294997002&scope=bot&permissions=2080374975** ')
-.setColor('RANDOM')
-  message.author.send(embed);
-    }
+
+client.on('message',async message => {
+    if (message.content === 'b!help') {
+try {
+message.author.send(`
+
+**الدعم الفني**
+
+**https://discord.gg/SYgU2pE**
+
+**لإضافة البوت**
+
+**https://discordapp.com/oauth2/authorize?client_id=470744146294997002&scope=bot&permissions=2080374975**
+`);
+} catch(e) {
+if(e) return message.reply('خاصك مقفول');
+}
+}
 });
 
 
