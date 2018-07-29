@@ -21,7 +21,7 @@ client.user.setStatus("dnd");
 
  client.on('ready', function(){
     var ms = 1000 ;
-    var setGame = [`b!help | in ${client.guilds.size} server`];
+    var setGame = [`b!help | in ${client.guilds.size} server b!inv ${client.users.size} users`];
     var i = -1;
     var j = 0;
     setInterval(function (){
