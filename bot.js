@@ -381,7 +381,7 @@ ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 		if (serverQueue && !serverQueue.playing) {
 			serverQueue.playing = true;
 			serverQueue.connection.dispatcher.resume();
-			return msg.channel.send('استأنفت الموسيقى بالنسبة لك !');
+			return msg.channel.send('تم إستئناف الموسيقى!');
 		}
 		return msg.channel.send('لا يوجد شيء حالي في العمل.');
 	}
@@ -451,6 +451,7 @@ function play(guild, song) {
 	dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
 
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
+	
 }
 
 
@@ -748,6 +749,8 @@ client.on('message', message => {
 .addField('     **أوامر الميوزك** ' ,' **  ** ')  
 .addField('     **b!play** ' ,' **لبدء أغنية** ')
 .addField('    **b!stop**' ,' **لإيقاف الأغنية** ')
+.addField('    **b!pause**' ,' **لإيقاف الأغنية مؤقتا** ')
+.addField('    **b!resume**' ,' **لإستئناف الأغنية** ')
 .addField('     **b!vol** ' ,' **لتعديل مستوى الصوت** ')
 .addField('     **b!np** ' ,' **لمعرفة الأغنية الحالية** ')
 .addField('     **b!queue** ' ,' **لرؤية قائمة الإنتظار** ')
