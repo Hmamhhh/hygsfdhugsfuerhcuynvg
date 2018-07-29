@@ -19,9 +19,9 @@ client.user.setStatus("dnd");
 });
 
 
- client.on('ready', function(){
-    var ms = 1000 ;
-    var setGame = [`b!help | in ${client.guilds.size} server b!inv `,` ${client.users.size} users`];
+client.on('ready', function(){
+    var ms = 10000 ;
+    var setGame = [`b!help ON ${client.guilds.size} Servers`,`b!inv ${client.users.size} Users`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -32,8 +32,8 @@ client.user.setStatus("dnd");
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`https://www.twitch.tv/hmamkhalid`);
-    }, ms);1000
+        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
+    }, ms);
 
 });
             
