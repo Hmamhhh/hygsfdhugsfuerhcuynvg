@@ -751,10 +751,10 @@ client.on('message', message => {
 .addField('     **أوامر الميوزك** ' ,' **  ** ')  
 .addField('     **b!play** ' ,' **لبدء أغنية** ')
 .addField('    **b!stop**' ,' **لإيقاف الأغنية** ')
-.addField('     **b!pause** ' ,' **لإيقاف الأغنية مؤقتا** ')
-.addField('     **b!start** ' ,' **لإستئناف الأغنية** ')
+.addField('     **b!vol** ' ,' **لتعديل مستوى الصوت** ')
+.addField('     **b!np** ' ,' **لمعرفة الأغنية الحالية** ')
+.addField('     **b!queue** ' ,' **لرؤية قائمة الإنتظار** ')
 .addField('     **b!skip** ' ,' **لتخطي الأغنية** ')    
-.addField('     **b!join** ' ,' **لجعل البوت ينضم للروم** ')
 .setColor('RANDOM')
   message.author.send(embed);
     }
