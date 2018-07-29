@@ -581,10 +581,7 @@ client.on('guildMemberRemove', member => {
 
 
 
-client.on('guildMemberAdd', member => {
-let mrole = message.guild.roles.find("name", "Member");
-message.guild.member(user).addRole(mrole);
-})
+
 
 
 
