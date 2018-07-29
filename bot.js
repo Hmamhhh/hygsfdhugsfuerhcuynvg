@@ -828,7 +828,20 @@ message.react("📩")
 }
 });
 
-
+var prefix = "b!"
+         client.on('message', message => {
+            if (message.content.startsWith(prefix + "bot")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField(' سيرفر الدعم الفني  `)
+.addField(' https://discord.gg/SYgU2pE `)
+.addField('لإضافة البوت للسيرفر `) 
+.addField(' https://discordapp.com/oauth2/authorize?client_id=470744146294997002&scope=bot&permissions=2080374975`) 
+.addField('مصمم  + صاحب البوت ',`!Hmam#1606`)
+.setColor('RANDOM')
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 
