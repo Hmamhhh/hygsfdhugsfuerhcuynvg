@@ -244,7 +244,7 @@ var PREFIX = "b!";
 
 client.on("message", message => {
 
-                        if (message.content ===b!q1 ) {
+                        if (message.content ===q1 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -257,7 +257,7 @@ client.on("message", message => {
       });
   }
  
-                        if (message.content === b!q2 ) {
+                        if (message.content === q2 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -270,7 +270,7 @@ client.on("message", message => {
       });
   }
 
-                            if (message.content === b!q3 ) {
+                            if (message.content === q3 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) { 
@@ -283,7 +283,7 @@ client.on("message", message => {
       });
   }
  
-                            if (message.content === b!q4 ) {
+                            if (message.content === q4 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -296,7 +296,7 @@ client.on("message", message => {
         });
   }
 
-                              if (message.content === b!q5 ) {
+                              if (message.content === q5 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -309,7 +309,7 @@ client.on("message", message => {
         });
   }
  
-                                  if (message.content === b!q6 ) {
+                                  if (message.content === q6 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -322,7 +322,7 @@ client.on("message", message => {
         });
   }
 	
-	                                  if (message.content === b!q7 ) {
+	                                  if (message.content === q7 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
