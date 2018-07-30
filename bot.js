@@ -166,7 +166,6 @@ m.sendMessage(args)
 
 
 
-const Discord = require("discord.js");
 const client = new Discord.Client();
 const yt = require('ytdl-core');
 
