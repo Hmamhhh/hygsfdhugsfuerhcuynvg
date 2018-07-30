@@ -168,7 +168,6 @@ m.sendMessage(args)
 
 const yt = require('ytdl-core');
 
-const prefix = 'b!'
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
