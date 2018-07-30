@@ -57,6 +57,7 @@
     "youtube-dl": "^1.12.2",
     "yuki": "^1.0.1",
     "youtube-info": "^1.2.0",
+    "get-youtube-id": "^1.0.0",
     "ytdl-core": "^0.20.4",
     "zalgolize": "^1.2.4"
   }
