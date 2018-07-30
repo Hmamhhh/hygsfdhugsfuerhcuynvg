@@ -244,7 +244,7 @@ var PREFIX = "b!";
 
 client.on("message", message => {
 
-                        if (message.content ===q1 ) {
+                        if (message.content === q1 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -383,7 +383,7 @@ var adkar = [
 ];
 client.on('message', message => {
   if (message.author.bot) return;
-  if (message.content.startsWith('b!اذكار')) {
+  if (message.content.startsWith('اذكار')) {
     if(!message.channel.guild) return;
   var client= new Discord.RichEmbed()
   .setTitle("اذكار") 
@@ -949,7 +949,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.send)
 .addField('     **القرآن والأذكار** ' ,' **  ** ') 
-.addField('     **:mosque: b! اذكار**' ,' **يعرض لك الاذكار ** ')
+.addField('     **:mosque:  اذكار**' ,' **يعرض لك الاذكار ** ')
 .addField('     **:mosque: quran 1** ' ,' **القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد** ')
 .addField('     **:mosque: quran 2**' ,' **سورة البقرة كاملة - القارئ الحاج ميثم التمار** ')
 .addField('     **:mosque: quran 3**' ,' **القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم** ')
