@@ -1109,3 +1109,6 @@ if  (msg.content === 'b!support') {
     msg.channel.send(slamat);
   }
 });
+	       client.on("guildCreate", guild => {
+  console.log(` شخص ما اضاف بوت  في سيرفر اسمه ! ${guild.name} اونر سيرفر هو ${guild.owner.user.username}!`)
+});
