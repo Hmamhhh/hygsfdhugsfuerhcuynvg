@@ -411,7 +411,6 @@ client.on('message', function(msg) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
-      .setAuthor(`${message.guild.name} [Server Icon URL]`, message.guild.iconURL)
       .addField(':globe_with_meridians:** نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
       .addField(':medal:** __الرتب__**',`[** __${msg.guild.roles.size}__ **]`,true)
       .addField(':red_circle:**__ عدد الاعضاء__**',`[** __${msg.guild.memberCount}__ **]`,true)
