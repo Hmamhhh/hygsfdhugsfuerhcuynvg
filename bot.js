@@ -166,7 +166,6 @@ m.sendMessage(args)
 
 
 
-const client = new Discord.Client();
 const yt = require('ytdl-core');
 
 const prefix = 'b!'
