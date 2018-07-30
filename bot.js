@@ -560,7 +560,7 @@ client.on('guildMemberAdd', member => {
         .setDescription(`منور السيرفر يا حلو :blush:` , `welcome to the server :blush:`)
         .addField(' :bust_in_silhouette:  انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
         .setColor('GREEN')
-        .setFooter('==== نتمنى لك الإستمتاع ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        .setFooter('====نــتــمــنــآ لــكــم آســتــمـــتــآع ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
     var channel =member.guild.channels.find('name', 'welcome')
     if (!channel) return;
@@ -574,7 +574,7 @@ client.on('guildMemberRemove', member => {
         .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
         .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
         .setColor('RED')
-        .setFooter(`==== نتمنى انك استمتعت بوقتك ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        .setFooter(`====نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
     var channel =member.guild.channels.find('name', 'welcome')
     if (!channel) return;
