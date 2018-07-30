@@ -389,7 +389,7 @@ client.on('message', message => {
   .setTitle("اذكار") 
   .setThumbnail(message.author.avatarURL)
   .setColor('RANDOM')
-  .setDescription(`{adkar[Math.floor(Math.random()  adkar.length)]}`)
+.setDescription(`${adkar[Math.floor(Math.random() * adkar.length)]}`)
                  .setTimestamp()
   message.channel.sendEmbed(client);
   message.react("🕋")
