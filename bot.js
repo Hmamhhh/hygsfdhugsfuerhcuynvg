@@ -156,7 +156,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('b!bc')){
- if (message.author.id !== '406451228004974603') return message.reply('** هذا الأمر قفط لصاحب البوت  **')
+ if (message.author.id !== '334980114607767552') return message.reply('** هذا الأمر قفط لصاحب البوت  **')
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
 m.sendMessage(args)
