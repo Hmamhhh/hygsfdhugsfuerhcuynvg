@@ -50,49 +50,6 @@ client.on('ready', function(){
 
 
 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '472371244428296233').setName("W");
-client.channels.find('id', '472371244428296233').setName("We");
-client.channels.find('id', '472371244428296233').setName("Wel");
-client.channels.find('id', '472371244428296233').setName("Welc");
-client.channels.find('id', '472371244428296233').setName("Welco");
-client.channels.find('id', '472371244428296233').setName("Welcom");
-client.channels.find('id', '472371244428296233').setName("Welcome");
-client.channels.find('id', '472371244428296233').setName("Welcome T");
-client.channels.find('id', '472371244428296233').setName("Welcome To");
-client.channels.find('id', '472371244428296233').setName("Welcome To B");
-client.channels.find('id', '472371244428296233').setName("Welcome To Be");
-client.channels.find('id', '472371244428296233').setName("Welcome To Bes");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best F");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Fr");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Fri");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Frie");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Frien");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Friend");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Friend");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Frien");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Frie");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Fri");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best Fr");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best F");
-client.channels.find('id', '472371244428296233').setName("Welcome To Best");
-client.channels.find('id', '472371244428296233').setName("Welcome To Bes");
-client.channels.find('id', '472371244428296233').setName("Welcome To Be");
-client.channels.find('id', '472371244428296233').setName("Welcome To B");
-client.channels.find('id', '472371244428296233').setName("Welcome To ");
-client.channels.find('id', '472371244428296233').setName("Welcome T");
-client.channels.find('id', '472371244428296233').setName("Welcome ");
-client.channels.find('id', '472371244428296233').setName("Welcom");
-client.channels.find('id', '472371244428296233').setName("Welco");
-client.channels.find('id', '472371244428296233').setName("Welc");
-client.channels.find('id', '472371244428296233').setName("Wel");
-client.channels.find('id', '472371244428296233').setName("We");
-client.channels.find('id', '472371244428296233').setName("W");
-
-  }, 3000);
-});
 
 
 
