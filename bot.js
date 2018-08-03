@@ -775,10 +775,10 @@ message.react("📩")
 
 
 const Slam = [
-  'تفضل https://discord.gg/SYgU2pE',
-  'خذ https://discord.gg/SYgU2pE',
-  'ادخل https://discord.gg/SYgU2pE',
-  'تشرفنا https://discord.gg/SYgU2pE',
+  'تفضل https://discord.gg/tMmF66U',
+  'خذ https://discord.gg/tMmF66U',
+  'ادخل https://discord.gg/tMmF66U',
+  'تشرفنا https://discord.gg/tMmF66U',
 ]
 client.on('message', msg => {
 if  (msg.content === 'b!support') {
@@ -812,7 +812,7 @@ message.author.send(`
 
 **لإضافة البوت**
 
-**https://discordapp.com/oauth2/authorize?client_id=470744146294997002&scope=bot&permissions=2080374975**
+**https://discordapp.com/oauth2/authorize?client_id=474232493487292447&permissions=271641622&scope=bot**
 `);
 } catch(e) {
 if(e) return message.reply('خاصك مقفول');
