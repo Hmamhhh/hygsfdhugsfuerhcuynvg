@@ -186,7 +186,7 @@ client.on('message', message => {
 
 
 client.on('message', function(msg) {
-    const prefix = '+'
+    const prefix = 'b!'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
